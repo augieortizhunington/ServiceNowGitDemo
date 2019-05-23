@@ -61,12 +61,105 @@ We have committed our code, and we are ready to push it to the remote repoostiro
 1. Set your remote origin by running: ```git remote add origin https://github.com/augieortizhunington/ServiceNowHuntingtonDemo.git```. It's possible it's already added since we've cloned the repo.
 2. We are ready to push our code up to the remote: ```git push origin master```. Master incidates the branch we are pushing to.
 3. Got back to Github and refresh. You should see your changes.
+5. Hit the pencil edit button on the READ.md file.
+6. Add this line: ```## This is short demo for pull purposes."
+7. Add a commit message
+8. Commit change. This is the same process we just applied, but we are using a GUI rather than a Command prompt.
 
 #### Pull
 
+It is **important** to note that anytime you are working in colaboration on a repository and you are sharing the same branch, you must pull the latest code down before you start working. This avoids future conclicts in the repository.
+
+1. Return the command prompt and run: ```git fetch``
+2. After it downloads any changes, run: ```git pull```
+3. You are now running on the latest version of the code inside the master branch
+
+#### Branching
+
+At any time during development, Git allows you to branch off code. This helps when you would like to update a feature on a specific version and can also help avoid future conflicts by working on a personal branch.
+
+1. To create a new branch: ```git branch dev```. This creates a new branch name dev
+2. To list all available branches: ```git branch```
+3. To switch and checkout to a new branch ```git checkout dev```
+4. Creating a branch doesn't push it up to your origin. You must call a command to do that: ```git push origin dev```
+
+#### Stashing
 
 
+### Step 4 - VS Code Intro
 
+For those not familar with VS Code, this is a light weight editior built by Microsoft which many devs have gravitated towards. Great search capability, built in source control, and ability to add exentions.
+
+1. Open Visual Studio Code
+2. Hit Open Folder, and use the same folder we've created for this demo.
+ > You'll see an explorer on your left with 5 main tab iconns. Explorer, Search, Source Control, Debugging, and Exentions. Notice you can see the ReadMe.md file we created in your explorer.
+ 
+ Let's quickly create a file, commit, and push it through VS code.
+
+ 3. Create the a folder named "Scripts" using explorer.
+ 4. Create a script file named. glideRecord.js
+ 5. Copy the following code block into your new file: 
+ ```
+ var user = new GlideRecord('sys_user');
+user.addQuery('sys_id', "Some sys ID");
+user.query();
+while(user.next()){
+    gs.log(user.email);
+}
+ ```
+
+ 6. Save the file.
+ 7. Before we commit, lets use the **dev** branch we crated during our branch section.
+ 8. Use the tree log on the bottom right of VS code. It should say master. We clicked, a menu will apear from the top. You'll see a list of available branches. Select dev.
+ 9. We are ready commit. Select the source control from the left nav. Type a commit message in the top right text box, then hit the check box. If a prompt appears about staging files, click "always"
+ 10. Our code is commited and all that is left to do is to push our code. Towards the bottom left, you'll see our branch name and a `0` down, and `1` up. The means there are no changes to pull down, and one commit change to push up. Click the sync button and our code will be pushed up.
+
+ #### Merging
+
+ To merge our new dev branch in master, lets go back to our repo on github.com. You'll see that have a recent push to our dev branch. There will be a green button "Compare and pull request". Since we are mergeing `dev` into `master`, make sure the base is master, and we comparing dev.
+
+ 1. Create the pull reqeust with the correct base, and compare.
+ 2. You can review all the changes, diffs, and commits before you merge.
+ 3. Merge pull request and confirm
+ 4. Our home page for the repo will reflect all the changes we made in the master branch
+
+### Step 5 - Git integration in ServiceNow
+
+#### Linking Github account
+
+1. Create a new project in Github, and copy the clone link
+2. Create New Applicaton named `SN Git Integration`
+3. Open Studio
+4. Select the "Link Source Control" from the "Source Control" Menu
+5. Enter the new repo link, and login.
+
+#### Importing from Source Contrl
+
+1. Fork this repo `https://github.com/ServiceNow/devtraining-needit-madrid.git`
+2. Using the fork, you know have created your own copy on your github account with the repo.
+3. Enter the clone link and your account details
+4. Application is loaded into your instance
+
+#### Using Branches
+
+1. You can switch branches from any number of branches that have been created
+2. Create a tag before creating a new branch.
+3. When creating a new branch, select your new tag.
+
+#### Commiting Code
+
+1. Make any change. 
+2. By using the "Apply Remote Changes" menu, you can push any changes
+3. Review your changes, and apply the changes.
+4. This only stashes the changes, and does not push them to the remote repo.
+5. There is a "Manage Stashes" menu. From here, you can review and stashes, and then apply.
+6. Use the "Commit Messages" menu, give it a message, and commit the new code
+7. 
+
+
+In summary, we have learned how to create a github repo, push & pull code, branch & and merge through the command line. We then follow the same procedure in VS Code and ServiceNow GUI's
+
+For any questions: agustin.ortiz@huntington.com
 
 
 
