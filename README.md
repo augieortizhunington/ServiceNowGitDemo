@@ -11,7 +11,7 @@
 > Note this a Unix/Linux shell and will not accpet Windows Commands. Linux cheatsheet can be found [here](http://cheatsheetworld.com/programming/unix-linux-cheat-sheet/).
 
 4. Inside of your shell, you will be in root PC folder `U:\`. 
-5. Run the command `git`. You should see a list of help commands. This confirms you have git installed and ready to use.
+5. Run the command ```git```. You should see a list of help commands. This confirms you have git installed and ready to use.
 
 > You are likely to run into a few issues while intializing your first repo.
 
@@ -32,7 +32,7 @@ Here is a pdf [cheat sheet](https://github.github.com/training-kit/downloads/git
 1. Copy the https link on the home page of repo on github. Should look like `https://github.com/augieortizhunington/ServiceNowHuntingtonDemo.git`
 2. Go back in your shell
 3. Run command `git clone https://github.com/augieortizhunington/ServiceNowHuntingtonDemo.git` (Replace with your link). This just created a copy of the repository on your local machine.
-4. Run `ls ServiceNowHuntingtonDemo`. This will change your directory into the new local repo.
+4. Run ```ls ServiceNowHuntingtonDemo```. This will change your directory into the new local repo.
 
 
 
