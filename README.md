@@ -4,7 +4,7 @@
 
 ### Step 1 - Installation and Start up
 
-1. Open Software Center. Download and install `Git for Windows`, `Visual Studioi Code`
+1. Open Software Center. Download and install `Git for Windows`, `Visual Studio Code`
 2. Once complete, you should see a Git folder in your Program files. Searching in windows, you should find **Git Bash**, **Git CMD**, and **Git GUI**
 3. **Open Git Bash**
 
