@@ -153,7 +153,7 @@ We've saved the file to the wrong branch so now we must use stash
 #### Linking Github account
 
 1. Create a new project in Github, and copy the clone link
-2. Create New Applicaton named `SN Git Integration`
+2. Create New Applicaton named `My New SN App`
 3. Open Studio
 4. Select the "Link Source Control" from the "Source Control" Menu
 5. Enter the new repo link, and login.
